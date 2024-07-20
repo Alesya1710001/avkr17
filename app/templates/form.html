@@ -1,0 +1,80 @@
+{% extends "main.html" %}
+{% block content %}
+<form method="post" action="/submit" class="card shadow-sm card-bordered border-dark col-lg-7">
+    <div class="card-header">
+        <div class='d-flex justify-content-end'>
+            <button type="button" class="btn btn-dark btn-sm" id="AddButton">
+                <span class="text-uppercase fs-8">
+                    Add one more name
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class='card-body' id="FormBody">
+        <div class='d-flex justify-content-center align-items-center mb-5'>
+            <label class='col-lg-4 col-form-label fw-bolder text-gray-600 required'>
+                <span class='small text-uppercase fs-8 fw-bold'>
+                    Name 1
+                </span>
+            </label>
+            <div class='col-lg-7'>
+                <input
+                    id="Name1" 
+                    name="name1"
+                    placeholder='Name'
+                    class='form-control form-control-sm form-control-solid text-gray-900'
+                    type="text"
+                    required
+                />
+            </div>
+            <div class='col-lg-1'></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class='d-flex justify-content-end'>
+            <button
+            type="submit"
+            class='btn btn-sm btn-info text-uppercase fs-8'
+            >
+            Submit
+            </button>
+        </div>
+    </div>
+</form>
+
+<script>
+    let nameIndex = 2;
+    $('#AddButton').on('click', () => {
+        $('#FormBody').append(
+            "<div class='d-flex justify-content-center align-items-center mb-5' id='NameBlock"+nameIndex+"'>\
+                <label class='col-lg-4 col-form-label fw-bolder text-gray-600 required'>\
+                    <span class='small text-uppercase fs-8 fw-bold'>\
+                        Name "+nameIndex+"\
+                    </span>\
+                </label>\
+                <div class='col-lg-7'>\
+                    <input\
+                        id='Name"+nameIndex+"' \
+                        name='name"+nameIndex+"'\
+                        placeholder='Name "+nameIndex+"'\
+                        class='form-control form-control-sm form-control-solid text-gray-900'\
+                        type='text'\
+                        required\
+                    />\
+                </div>\
+                <div class='col-lg-1 text-end'>\
+                    <button\
+                        class='btn btn-sm btn-light text-uppercase fs-8'\
+                        type='button'\
+                        onclick=$('#NameBlock"+nameIndex+"').remove()\
+                    >\
+                        ⨉\
+                    </button>\
+                </div>\
+            </div>"
+        );
+        nameIndex++;
+    });
+    </script>
+
+{% endblock %}

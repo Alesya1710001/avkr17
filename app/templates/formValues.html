@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="card shadow-sm card-bordered border-dark col-lg-7">
+    <div class="card-header">
+        <span class="text-gray-900 fs-8 fw-bold text-uppercase">Form values</span>
+    </div>
+    <div class='card-body'>
+        {% for name in names %}
+        <div class="d-flex">
+            <div class="col-lg-2">Form {{name.id}}:</div>
+            <div class="col-lg-10">{{', '.join(name.names)}}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
