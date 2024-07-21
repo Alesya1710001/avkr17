@@ -1,9 +1,7 @@
-
-from app import app, db
+from my_app import db, app
 from flask import request
 from flask import render_template
-
-from models import Form
+from my_app.models import Form
 
 
 @app.route('/')
@@ -20,7 +18,6 @@ def submit_form():
   name_list = []
   for key in request.form:
     name_list.append(request.form[key])
-
   form = Form(name_list)
   db.session.add(form)
   db.session.commit()

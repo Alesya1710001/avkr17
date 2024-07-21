@@ -1,4 +1,4 @@
-from app import db
+from my_app import db
 from sqlalchemy import Column, Integer
 from sqlalchemy.dialects.postgresql.json import JSONB
 
