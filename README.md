@@ -24,16 +24,9 @@ POSTGRES_DB=db_name
 ```
 Замените `db_name`, `user` и `password` на ваши значения.
 
-### 4. Установите зависимости
-
-``` bash
-pip install -r requirements.txt
-```
-
-### 5. Запустите приложение:
+### 4. Запустите приложение:
 
 Используйте Docker Compose для сборки и запуска контейнеров:
-
 
 ``` bash
 docker compose up --build
@@ -76,6 +69,8 @@ pip install -r requirements.txt
    psql -U postgres
     ```
 
+Вместо `postgres` подставьте ваше имя пользователя в PostgreSQL.
+
 После этого выполните следующие SQL команды в интерактивной консоли:
 
 ```sql
@@ -103,8 +98,6 @@ POSTGRES_DB=db_name
 Запустите миграции для создания необходимых таблиц в базе данных:
 
 ```bash
-flask db init
-flask db migrate
 flask db upgrade
 ```
 
