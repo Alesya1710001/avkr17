@@ -16,15 +16,18 @@
 
 Создайте файл `.env` в корневой директории проекта и настройте необходимые переменные окружения:
 
-env
-DB_URL=postgres://user:password@db/db_name
-POSTGRES_USER=user
-POSTGRES_PASSWORD=password
-POSTGRES_DB=db_name
+``` bash
+DB_URL=postgres://user:password@db/db_name \
+POSTGRES_USER=user \
+POSTGRES_PASSWORD=password \
+POSTGRES_DB=db_name \
+```
 
 ### 4. Установите зависимости
 
-``pip install -r requirements.txt``
+``` bash
+pip install -r requirements.txt
+```
 
 Убедитесь, что все необходимые зависимости указаны в файле `requirements.txt`.
 
@@ -32,8 +35,10 @@ POSTGRES_DB=db_name
 
 Используйте Docker Compose для сборки и запуска контейнеров:
 
-bash
+
+``` bash
 docker-compose up --build
+```
 
 ## Использование
 
