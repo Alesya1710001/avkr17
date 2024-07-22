@@ -63,9 +63,9 @@ pip install -r requirements.txt
 
  Откройте терминал и выполните следующую команду для создания новой базы данных и пользователя PostgreSQL:
 
-    ``` bash
-    psql -U postgres
-    ```
+  ``` bash
+  psql -U postgres
+  ```
 
 Вместо `postgres` подставьте ваше имя пользователя в PostgreSQL.
 
