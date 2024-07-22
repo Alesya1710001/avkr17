@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 dotenv_path = Path(__file__).parent.parent.joinpath('.env')
 load_dotenv(dotenv_path)
 
-DB_HOST = os.getenv("DB_HOST")
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_HOST
+DB_URL = os.getenv("DB_URL")
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy(app)

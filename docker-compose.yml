@@ -15,7 +15,7 @@ services:
 
   web:
     environment:
-      DB_HOST: $DB_HOST
+      DB_HOST: $DB_URL
       FLASK_APP: runserver.py
     container_name: web
     build: .
