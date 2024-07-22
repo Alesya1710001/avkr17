@@ -17,10 +17,10 @@
 Создайте файл `.env` в корневой директории проекта и настройте необходимые переменные окружения:
 
 ``` bash
-DB_URL=postgres://user:password@db/db_name \
-POSTGRES_USER=user \
-POSTGRES_PASSWORD=password \
-POSTGRES_DB=db_name \
+DB_URL=postgres://user:password@db/db_name
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=db_name
 ```
 Замените `db_name`, `user` и `password` на ваши значения.
 
@@ -97,10 +97,10 @@ GRANT ALL PRIVILEGES ON DATABASE db_name TO user;
 Создайте файл `.env` в корневой директории проекта и настройте необходимые переменные окружения:
 
 ``` bash
-DB_URL=postgres://user:password@db/db_name \
-POSTGRES_USER=user \
-POSTGRES_PASSWORD=password \
-POSTGRES_DB=db_name \
+DB_URL=postgres://user:password@db/db_name
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=db_name
 ```
 Замените `db_name`, `user` и `password` на ваши значения.
 
@@ -119,5 +119,7 @@ flask db upgrade
 ```bash
 python runserver.py
 ```
+
+Приложение будет доступно по адресу: http://localhost:5000
 
 
