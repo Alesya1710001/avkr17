@@ -15,7 +15,7 @@ services:
 
   web:
     environment:
-      DB_HOST: postgresql://postgres:postgres@postgres/avkr17
+      DB_HOST: $DB_HOST
       FLASK_APP: runserver.py
     container_name: web
     build: .
